@@ -1,0 +1,216 @@
+///////////////////////////
+/// MIXIN PAGE D'ACCUEIL///
+///////////////////////////
+
+//Mixin slider vers gauche, h1, versionné responsive
+@mixin sliderleftSize {
+  @keyframes sliderleftW {
+    0% {
+      transform: translateX(600px);
+      opacity: 0;
+    }
+  
+    40% {
+      opacity: 0.9;
+    }
+  
+    100% {
+      transform: translateX(100px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderleftD {
+    0% {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(80px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderleftT {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderleftM {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+};
+//Mixin slider vers droite, h2, versionné responsive
+@mixin sliderrightSize {
+  @keyframes sliderrightW {
+    0% {
+      transform: translateX(-600px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(-100px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderrightD {
+    0% {
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(-100px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderrightT {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sliderrightM {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+};
+//Mixin slider vers bot, p
+@mixin sliderbotSize {
+  @keyframes sliderbot {
+    0% {
+      transform: translateY(-300px);
+      opacity: 0;
+    }
+  
+    70% {
+  
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+@mixin sliderTop {
+  @keyframes slidertop {
+    0% {
+      transform: translateY(300px);
+      opacity: 0;
+    }
+  
+    70% {
+  
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+//Mixin slider vers top, from AccueilPage..., transition
+@mixin slide-up-project{
+  @keyframes slide-up-project {
+    0% {
+      opacity: 0;
+      transform: translateY(800px);
+    }
+
+
+    10% {
+      opacity: 0.1;
+
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+//Mixin slider vers top, ...to ProjectPage, transition
+@mixin slide-up-accueil{
+  @keyframes slide-up-accueil {
+    0% {
+      transform: translateY(0px);
+    }
+
+    30% {
+      opacity: 1;
+      transform: translateY(20px);
+
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-800px);
+    }
+  }
+}

@@ -12,6 +12,7 @@ const routes = [
     path: "/project",
     name: "ProjectPage",
     component: ProjectPage,
+    meta: { transition: "slide-up" },
   },
 ];
 

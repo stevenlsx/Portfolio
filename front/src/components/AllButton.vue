@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button>
+    <button @click="goToProject()">
       <slot> {{ btnText }} </slot>
     </button>
   </div>
@@ -14,21 +14,27 @@ export default {
       btnText: "",
     }
   },
+  methods: {
+    goToProject() {
+      this.$router.push('/project')
+    }
+  }
 
 }
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/animMixin.scss";
+
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   padding: 3px 0 3px 0;
-  width: 60%;
-
 }
 
 button {
+  @include sliderTop;
   position: relative;
   background: #282828;
   border: 1px solid rgb(255, 254, 254);
@@ -42,6 +48,8 @@ button {
   transition: .6s;
   overflow: hidden;
   margin-top: 40px;
+  animation: slidertop 1s ease-in-out;
+  animation-delay: 0.6s;
 
   &:focus {
     outline: 0;
@@ -91,6 +99,37 @@ button {
       opacity: 1;
       transition: 0.9s;
     }
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  button {
+    font-size: 1.2rem;
+    width: 30%;
+    padding: 0 5px 0 5px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  button {
+    font-size: 1.3rem;
+    width: 30%;
+
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  button {
+    font-size: 1.4rem;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  button {
+    font-size: 1.6rem;
+    width: 20%;
   }
 }
 </style>
