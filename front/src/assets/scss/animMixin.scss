@@ -1,6 +1,6 @@
-///////////////////////////
-/// MIXIN PAGE D'ACCUEIL///
-///////////////////////////
+//////////////////////
+/// MIXIN HomePage///
+/////////////////////
 
 //Mixin slider vers gauche, h1, versionné responsive
 @mixin sliderleftSize {
@@ -8,14 +8,16 @@
     0% {
       transform: translateX(600px);
       opacity: 0;
+      visibility: hidden;
     }
   
-    40% {
-      opacity: 0.9;
+    30% {
+      opacity: 0;
+      visibility: visible;
     }
   
     100% {
-      transform: translateX(100px);
+      transform: translateX(0px);
       opacity: 1;
     }
   }
@@ -24,14 +26,16 @@
     0% {
       transform: translateX(400px);
       opacity: 0;
+    visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      opacity: 0;
+      visibility: visible;
     }
   
     100% {
-      transform: translateX(80px);
+      transform: translateX(0px);
       opacity: 1;
     }
   }
@@ -40,10 +44,12 @@
     0% {
       transform: translateX(200px);
       opacity: 0;
+    visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      opacity: 0;
+      visibility: visible;
     }
   
     100% {
@@ -56,10 +62,12 @@
     0% {
       transform: translateX(100px);
       opacity: 0;
+    visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      opacity: 0;
+      visibility: visible;
     }
   
     100% {
@@ -74,14 +82,15 @@
     0% {
       transform: translateX(-600px);
       opacity: 0;
+      visibility: hidden;
     }
-  
-    70% {
-      opacity: 0.7;
-    }
-  
+  30%{
+    opacity: 0;
+    visibility: visible;
+  }
+    
     100% {
-      transform: translateX(-100px);
+      transform: translateX(0px);
       opacity: 1;
     }
   }
@@ -90,14 +99,16 @@
     0% {
       transform: translateX(-500px);
       opacity: 0;
+      visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      visibility: visible;
+      opacity: 0;
     }
   
     100% {
-      transform: translateX(-100px);
+      transform: translateX(0px);
       opacity: 1;
     }
   }
@@ -106,10 +117,12 @@
     0% {
       transform: translateX(-200px);
       opacity: 0;
+      visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      visibility: visible;
+      opacity: 0;
     }
   
     100% {
@@ -122,10 +135,12 @@
     0% {
       transform: translateX(-100px);
       opacity: 0;
+      visibility: hidden;
     }
   
-    70% {
-      opacity: 0.7;
+    30% {
+      visibility: visible;
+      opacity: 0;
     }
   
     100% {
@@ -138,7 +153,7 @@
 @mixin sliderbotSize {
   @keyframes sliderbot {
     0% {
-      transform: translateY(-300px);
+      transform: translateY(-100px);
       opacity: 0;
     }
   
@@ -156,8 +171,9 @@
 @mixin sliderTop {
   @keyframes slidertop {
     0% {
-      transform: translateY(300px);
+      transform: translateY(40px);
       opacity: 0;
+      
     }
   
     70% {
@@ -168,10 +184,11 @@
     100% {
       transform: translateY(0px);
       opacity: 1;
+      visibility: visible;
     }
   }
 }
-//Mixin slider vers top, from AccueilPage..., transition
+//Mixin slider vers top, from HomePage..., transition
 @mixin slide-up-project{
   @keyframes slide-up-project {
     0% {

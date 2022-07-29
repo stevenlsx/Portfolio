@@ -1,18 +1,42 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import AccueilPage from "../views/AccueilPage.vue";
+import HomePage from "../views/HomePage.vue";
 import ProjectPage from "../views/ProjectPage.vue";
+import ProjectReservia from "../views/ProjectReservia";
+import ProjectOhmyfood from "../views/ProjectOhmyfood";
+import ProjectKanap from "../views/ProjectKanap";
+import ProjectGroupomania from "../views/ProjectGroupomania";
 
 const routes = [
   {
     path: "/",
-    name: "AccueilPage",
-    component: AccueilPage,
+    name: "HomePage",
+    component: HomePage,
   },
   {
     path: "/project",
     name: "ProjectPage",
     component: ProjectPage,
     meta: { transition: "slide-up" },
+    children: [
+      {
+        path: "reservia",
+
+        component: ProjectReservia,
+      },
+      {
+        path: "ohmyfood",
+        name: "ohmyfood",
+        component: ProjectOhmyfood,
+      },
+      {
+        path: "kanap",
+        component: ProjectKanap,
+      },
+      {
+        path: "groupomania",
+        component: ProjectGroupomania,
+      },
+    ],
   },
 ];
 

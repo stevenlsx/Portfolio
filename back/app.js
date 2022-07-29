@@ -4,8 +4,8 @@ const app = express();
 app.use(express.json());
 
 //Initialisation de dotenv pour les variables environnements
-const dotenv = require("dotenv");
-dotenv.config();
+//const dotenv = require("dotenv");
+//dotenv.config();
 
 //Middleware configurant les headers
 app.use((req, res, next) => {

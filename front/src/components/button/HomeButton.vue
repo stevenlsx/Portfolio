@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button @click="goToProject()">
+    <button>
       <slot> {{ btnText }} </slot>
     </button>
   </div>
@@ -8,23 +8,20 @@
 
 <script>
 export default {
-  name: 'allButton',
+  name: 'homeButton',
   data() {
     return {
-      btnText: "",
+      isActive: true
     }
   },
   methods: {
-    goToProject() {
-      this.$router.push('/project')
-    }
-  }
 
+  }
 }
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/animMixin.scss";
+@import "src/assets/scss/animMixin.scss";
 
 .container {
   display: flex;
@@ -41,15 +38,17 @@ button {
   color: rgb(255, 255, 255);
   width: 22%;
   height: 60px;
-
   font-size: 1.5rem;
   border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px black;
   font-family: 'Raleway', sans-serif;
   transition: .6s;
+  visibility: hidden;
   overflow: hidden;
   margin-top: 40px;
-  animation: slidertop 1s ease-in-out;
-  animation-delay: 0.6s;
+  animation: slidertop 1s ease-in-out forwards;
+  animation-delay: 1.3s;
 
   &:focus {
     outline: 0;
@@ -103,6 +102,8 @@ button {
 
 }
 
+
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   button {
     font-size: 1.2rem;
@@ -130,6 +131,12 @@ button {
   button {
     font-size: 1.6rem;
     width: 20%;
+
+  }
+
+  .container {
+
+    margin-bottom: 20px;
   }
 }
 </style>
