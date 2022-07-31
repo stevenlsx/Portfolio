@@ -17,26 +17,24 @@ const routes = [
     name: "ProjectPage",
     component: ProjectPage,
     meta: { transition: "slide-up" },
-    children: [
-      {
-        path: "reservia",
-
-        component: ProjectReservia,
-      },
-      {
-        path: "ohmyfood",
-        name: "ohmyfood",
-        component: ProjectOhmyfood,
-      },
-      {
-        path: "kanap",
-        component: ProjectKanap,
-      },
-      {
-        path: "groupomania",
-        component: ProjectGroupomania,
-      },
-    ],
+  },
+  {
+    path: "/reservia",
+    name: "ProjectReservia",
+    component: ProjectReservia,
+  },
+  {
+    path: "/ohmyfood",
+    name: "ohmyfood",
+    component: ProjectOhmyfood,
+  },
+  {
+    path: "/kanap",
+    component: ProjectKanap,
+  },
+  {
+    path: "/groupomania",
+    component: ProjectGroupomania,
   },
 ];
 

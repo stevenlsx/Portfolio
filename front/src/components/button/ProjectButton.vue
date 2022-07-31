@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button>
+    <button class="container__btn">
       <slot> {{ btnText }} </slot>
     </button>
   </div>
@@ -22,6 +22,7 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/scss/animMixin.scss";
+@import "src/assets/scss/variables.scss";
 
 .container {
   display: flex;
@@ -42,7 +43,7 @@ export default {
   button {
 
     position: relative;
-    background: #282828;
+    background: $secondary-color;
     border: 1px solid rgb(255, 254, 254);
     color: rgb(255, 255, 255);
     height: 50px;
@@ -50,7 +51,6 @@ export default {
     font-family: 'Raleway', sans-serif;
     transition: .6s;
     overflow: hidden;
-
     font-size: 1.1rem;
     width: 50%;
     padding: 0 5px 0 5px;
@@ -89,7 +89,7 @@ export default {
     }
 
     &:active {
-      background: #30d0cd;
+      background: $tertiary-color;
       cursor: pointer;
       border-style: none;
 
@@ -118,7 +118,7 @@ export default {
 
   button {
     position: relative;
-    background: #282828;
+    background: $secondary-color;
     border: 1px solid rgb(255, 254, 254);
     color: rgb(255, 255, 255);
     height: 45px;
@@ -164,7 +164,7 @@ export default {
     }
 
     &:active {
-      background: #30d0cd;
+      background: $tertiary-color;
       cursor: pointer;
       border-style: none;
 
@@ -194,9 +194,9 @@ export default {
 
   button {
     position: relative;
-    background: white;
+    background: $secondary-color;
     border: 1px solid rgb(255, 254, 254);
-    color: black;
+    color: white;
     height: 50px;
     border-radius: 8px;
     font-family: 'Raleway', sans-serif;
@@ -240,8 +240,8 @@ export default {
     }
 
     &:hover {
-      background: #30d0cd;
-      color: white;
+      background: $tertiary-color;
+      color: black;
       cursor: pointer;
       border-style: none;
 
@@ -272,9 +272,9 @@ export default {
 
   button {
     position: relative;
-    background: white;
+    background: $secondary-color;
     border: 1px solid rgb(255, 254, 254);
-    color: black;
+    color: white;
     height: 70px;
     border-radius: 8px;
     font-family: 'Raleway', sans-serif;
@@ -284,6 +284,7 @@ export default {
     font-size: 1.3rem;
     width: 50%;
     padding: 0 5px 0 5px;
+
 
     &:focus {
       outline: 0;
@@ -318,8 +319,9 @@ export default {
     }
 
     &:hover {
-      background: #30d0cd;
-      color: white;
+      background: $tertiary-color;
+      color: black;
+
       cursor: pointer;
       border-style: none;
 
@@ -335,6 +337,8 @@ export default {
         transition: 0.9s;
       }
     }
+
+
 
   }
 

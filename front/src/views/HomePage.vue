@@ -17,7 +17,7 @@
       </header>
       <div class="home__p">
         <p>
-          Je m'apelle Steven, j'ai 25 ans et je suis diplôme de la formation de développeur web OpenClassrooms.<br>
+          Diiplôme de la formation de développeur web OpenClassrooms.<br>
           Durant mon parcours, j'ai pu me former au front-end avec HTML/CSS, Javascript, Vue.js
           ainsi qu'aux bonnes pratiques du SEO. <br>
           J'ai aussi appris à développer en back-end avec Node.js, Express, SQL et MongoDB. <br>
@@ -85,6 +85,8 @@ header {
     align-self: center;
     width: 90%;
     font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 10px;
 
     >p {
       @include sliderbotSize;
@@ -92,10 +94,12 @@ header {
       opacity: 0;
       animation-delay: 0.65s;
       //margin-bottom: 20px;
-      padding: 20px 0px 0 20px;
+      padding: 20px 0 0 20px;
+      background-color: white;
+      color: black;
       box-shadow: 3px 3px 15px black;
       width: 100%;
-
+      border-radius: 5px;
     }
   }
 

@@ -1,21 +1,30 @@
 <template>
-  <div class="projet">
-    <div class="projet__h1">
-      <h1>Projets Réalisés</h1>
-    </div>
-    <div class="projet__card">
-      <ProjectCard />
-    </div>
-  </div>
+
+  <body>
+    <header>
+      <div class="header__h1">
+        <h1>Projets Réalisés</h1>
+      </div>
+    </header>
+    <section>
+      <div class="section__card">
+        <ProjectCard />
+      </div>
+    </section>
+  </body>
 </template>
 
 <script>
 
 import ProjectCard from "../components/ProjectCard.vue"
 
+
 export default {
   name: "ProjectPage",
-  components: { ProjectCard },
+  components: {
+    ProjectCard,
+
+  },
   data() {
     return {
 
@@ -24,82 +33,103 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.projet {
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+}
 
-  &__h1 {
-    text-align: center;
-    height: 100px;
-    margin-bottom: 20px;
+header {
+  //display: flex;
+  height: 250px;
+}
 
-    >h1 {
-      padding-top: 70px;
-      color: white;
-    }
+.header__h1 {
+  text-align: center;
+  height: 100px;
+
+
+  >h1 {
+    padding-top: 70px;
+    color: white;
+    margin-bottom: 40px;
+
   }
 }
+
+
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .projet {
+  section {
+    margin-top: 20px;
+  }
 
-    &__card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    >h1 {
-      font-size: 1.9rem;
-    }
+  h1 {
+    font-size: 1.9rem;
   }
 }
+
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .projet {
-    &__card {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
+  section {
+    margin-top: 20px;
+  }
 
-    >h1 {
-      font-size: 2rem;
-    }
+  .section__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .projet {
-    &__card {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
+  section {
+    margin-top: 40px;
+  }
 
-    >h1 {
-      font-size: 2.4rem;
-    }
+  .section__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    font-size: 2.4rem;
   }
 }
 
+
 @media screen and (min-width: 1025px) {
-  .projet {
 
-    &__card {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
+  section {
+    margin-top: 40px;
+  }
 
-    >h1 {
-      font-size: 3rem;
-    }
+  .section__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 }
 </style>

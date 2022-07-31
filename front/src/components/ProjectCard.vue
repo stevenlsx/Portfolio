@@ -1,6 +1,5 @@
 
 <template>
-
     <div class="card" v-for="Card in cardArray" :key="Card">
 
         <div class="card__img">
@@ -13,9 +12,13 @@
             <p>{{ Card.caption }}</p>
         </div>
         <div class="overlay">
-            <ProjectButton @click="redirectProject(Card.url)">
-                En savoir plus
+
+            <ProjectButton :class="{ btn__event: isActive }">
+                <router-link :to=Card.url>
+                    En savoir plus
+                </router-link>
             </ProjectButton>
+
         </div>
 
     </div>
@@ -37,14 +40,14 @@ export default {
                     image: require("../assets/img/reservia_logo.png"),
                     title: "Reservia",
                     caption: "Transformer une maquette en site web avec HTML & CSS ",
-                    url: "reservia"
+                    url: "/reservia"
 
                 },
                 {
                     image: require("../assets/img/ohmyfood_logo.png"),
                     title: "Ohmyfood!",
                     caption: "Dynamiser une page web avec des animations CSS",
-                    url: "ohmyfood"
+                    url: "/ohmyfood"
                 },
                 {
                     image: require("../assets/img/kanap_logo.png"),
@@ -59,30 +62,55 @@ export default {
                     url: "/groupomania"
                 }
             ],
-
+            isActive: true,
 
         }
     },
     methods: {
         redirectProject(url) {
-            this.$router.push(url)
+            this.$router.push({ name: url })
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
+@import "src/assets/scss/variables.scss";
+
+a {
+    display: inline-block;
+    width: 100%;
+    background-color: $secondary-color ;
+    color: white;
+    text-decoration: none;
+    border-radius: 18px;
+    transition-delay: 0s;
+    transition: 0.6s;
+}
+
+
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
-
-
-
-
     .overlay {
         display: flex;
         justify-content: center;
         background-color: white;
         width: 100%;
         border-radius: 18px;
+    }
+
+    .btn__event button {
+        text-align: center;
+
+        &:active a {
+            background-color: $tertiary-color ;
+            transition-delay: 0s;
+            transition: 0.6s;
+        }
+    }
+
+    a {
+        line-height: 50px;
     }
 
     .card {
@@ -156,6 +184,20 @@ export default {
         background-color: white;
         width: 100%;
         border-radius: 18px;
+    }
+
+    .btn__event button {
+        text-align: center;
+
+        &:active a {
+            background-color: $tertiary-color ;
+            transition-delay: 0s;
+            transition: 0.6s;
+        }
+    }
+
+    a {
+        line-height: 45px;
     }
 
     .card {
@@ -242,6 +284,20 @@ export default {
         transition: .5s ease;
         border-radius: 10px;
         background-color: black;
+    }
+
+    .btn__event button {
+        text-align: center;
+
+        &:hover a {
+            background-color: $tertiary-color ;
+            transition-delay: 0s;
+            transition: 0.6s;
+        }
+    }
+
+    a {
+        line-height: 50px;
     }
 
     .card {
@@ -335,6 +391,20 @@ export default {
         background-color: black;
     }
 
+    .btn__event button {
+        text-align: center;
+
+        &:hover a {
+            background-color: $tertiary-color ;
+            transition-delay: 0s;
+            transition: 0.6s;
+        }
+    }
+
+    a {
+        line-height: 70px;
+    }
+
     .card {
         position: relative;
         display: flex;
@@ -345,7 +415,7 @@ export default {
         margin-top: 25px;
         margin-bottom: 20px;
         background-color: white;
-        border: 4px solid black;
+        border: 3px solid black;
         text-align: center;
         border-radius: 18px;
         box-shadow: 0 0px 15px rgba(0, 0, 0, .2);

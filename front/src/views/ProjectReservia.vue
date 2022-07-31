@@ -9,7 +9,7 @@
 
 
 export default {
-    name: "ProjectOhmyfood",
+    name: "projetReservia",
 
     data() {
         return {
@@ -19,4 +19,10 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.text {
+    height: 100px;
+    width: 100px;
+    border: 4px solid white;
+    background-color: blue;
+}
 </style>

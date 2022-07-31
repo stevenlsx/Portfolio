@@ -22,6 +22,7 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/scss/animMixin.scss";
+@import "src/assets/scss/variables.scss";
 
 .container {
   display: flex;
@@ -33,8 +34,8 @@ export default {
 button {
   @include sliderTop;
   position: relative;
-  background: #282828;
-  border: 1px solid rgb(255, 254, 254);
+  background: $secondary-color;
+  border: 1px solid black;
   color: rgb(255, 255, 255);
   width: 22%;
   height: 60px;
@@ -83,7 +84,8 @@ button {
   }
 
   &:hover {
-    background: #30d0cd;
+    background: $tertiary-color;
+    color: black;
     cursor: pointer;
     border-style: none;
 
