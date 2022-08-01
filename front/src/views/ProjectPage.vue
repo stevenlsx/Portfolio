@@ -43,7 +43,7 @@ body {
 }
 
 header {
-  //display: flex;
+
   height: 250px;
 }
 
