@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import ProjectPage from "../views/ProjectPage.vue";
+import AboutMe from "../views/AboutMe.vue";
 import ProjectReservia from "../views/ProjectReservia";
 import ProjectOhmyfood from "../views/ProjectOhmyfood";
 import ProjectKanap from "../views/ProjectKanap";
@@ -11,12 +12,21 @@ const routes = [
     path: "/",
     name: "HomePage",
     component: HomePage,
+    meta: {
+      hideNavbar: true,
+    },
   },
   {
     path: "/project",
     name: "ProjectPage",
     component: ProjectPage,
     meta: { transition: "slide-up" },
+  },
+  {
+    path: "/aboutme",
+    name: "AboutMe",
+    component: AboutMe,
+    //meta: { transition: "slide-up" },
   },
   {
     path: "/reservia",

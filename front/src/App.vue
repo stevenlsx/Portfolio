@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="nav">
-      <NavBar />
+      <NavBar :class="{ transi: isActive }" v-if="!$route.meta.hideNavbar" />
     </div>
 
     <router-view v-slot="{ Component, route }">
@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-
+      isActive: true
     }
   },
 
@@ -44,6 +44,11 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+}
+
+.transi {
+  animation: sliderbot 1s ease-in-out forwards;
 }
 
 @font-face {

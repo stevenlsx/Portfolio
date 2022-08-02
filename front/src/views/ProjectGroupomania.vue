@@ -22,7 +22,6 @@
                 La modification et suppression des publications par leurs auteurs doit être possible.<br />
                 Les publications les plus récentes doivent être facilement repérable. <br />
                 Un administrateur doit pouvoir modérer les intéractions entre salariés.<br />
-
                 La session de utilisateur doit persister pendant qu'il est connecté.<br />
 
             </p>

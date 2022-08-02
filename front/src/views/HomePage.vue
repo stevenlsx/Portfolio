@@ -17,18 +17,15 @@
       </header>
       <div class="home__p">
         <p>
-          Diiplôme de la formation de développeur web OpenClassrooms.<br>
-          Durant mon parcours, j'ai pu me former au front-end avec HTML/CSS, Javascript, Vue.js
-          ainsi qu'aux bonnes pratiques du SEO. <br>
-          J'ai aussi appris à développer en back-end avec Node.js, Express, SQL et MongoDB. <br>
-          Mes cours en auto-didacte comme en distancielles m'ont habitué à être autonome, persévérant et rigoureux dans
-          mon travail.<br>
-          Ils ont été une porte d'entrée dans le monde du développement et je suis impatient de pouvoir monter en
-          compétences.
+          "Diplômé de la formation de développeur web OpenClassrooms, je suis formé au front-end et au back-end.<br>
+          Cette expérience a été une porte d'entrée dans le monde du développement web. Je suis donc impatient de
+          développer mes compétences en travaillant avec vous".
         </p>
       </div>
-
-      <HomeButton @click="goToProject()">{{ btnText }}</HomeButton>
+      <div class="home__btn">
+        <HomeButton @click="goToProject()">{{ btnText }}</HomeButton>
+        <HomeButton @click="goToAboutMe()">{{ btnTextMe }}</HomeButton>
+      </div>
 
     </div>
   </body>
@@ -45,13 +42,17 @@ export default {
   data() {
     return {
       btnText: "Mes projets",
+      btnTextMe: "Mon expérience"
 
     }
   },
   methods: {
     goToProject() {
-      this.$router.push('/project')
+      this.$router.push("/project")
     },
+    goToAboutMe() {
+      this.$router.push("/aboutme")
+    }
   }
 }
 </script>
@@ -62,6 +63,10 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+nav {
+  visibility: hidden;
 }
 
 .home {
@@ -78,6 +83,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+
   }
 
   &__p {
@@ -103,6 +109,13 @@ header {
     }
   }
 
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   &__me {
     height: 181px;
     text-align: center;
@@ -116,11 +129,13 @@ header {
   }
 }
 
+
 /************** MOBILE SCREEN **************/
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
   header {
     flex-direction: column;
+    margin-top: -50px;
   }
 
   .home {
@@ -170,8 +185,13 @@ header {
 /************** TABLET SCREEN **************/
 @media screen and (min-width: 481px) and (max-width: 768.9px) {
   .home {
+    header {
+      margin-top: -60px;
+    }
+
     &__me {
       width: 50%;
+      padding-bottom: 25px;
 
       >img {
         @include sliderleftSize;
@@ -183,13 +203,15 @@ header {
 
     &__title {
       width: 50%;
+
+
     }
 
     &__h1 {
       text-align: center;
       width: 50%;
-      padding-top: 60px;
-      height: 120px;
+      height: 100px;
+      padding-top: 40px;
       margin-bottom: 18px;
 
       >h1 {
@@ -230,11 +252,15 @@ header {
     height: 225px;
   }
 
+  header {
+    margin-top: -60px;
+  }
+
   .home {
     &__h1 {
-      padding-top: 60px;
       height: 100px;
       margin-bottom: 10px;
+      padding-top: 50px;
 
       >h1 {
         @include sliderrightSize;
@@ -242,6 +268,10 @@ header {
         align-self: flex-end;
         font-size: 2rem;
       }
+    }
+
+    &__me {
+      padding-bottom: 60px;
     }
 
     &__h2 {
@@ -268,9 +298,14 @@ header {
 
 /************** WIDE SCREEN **************/
 @media screen and (min-width: 1025px) {
+  header {
+    margin-top: -50px;
+  }
 
   .home {
     &__me {
+      padding-bottom: 50px;
+
       >img {
         @include sliderleftSize;
         animation: sliderleftW 1s forwards;
@@ -285,9 +320,10 @@ header {
     }
 
     &__h1 {
-      padding-top: 60px;
+
       height: 100px;
       margin-bottom: 10px;
+      padding-top: 20px;
 
       >h1 {
         @include sliderrightSize;
@@ -311,8 +347,10 @@ header {
     }
 
     &__p {
-      margin-top: 60px;
+      margin-top: 80px;
+      margin-bottom: 40px;
       font-size: 1.5rem;
+      height: 150px;
     }
   }
 }

@@ -8,6 +8,9 @@
             <li>
                 <router-link to="/project">Projets Réalisés</router-link>
             </li>
+            <li>
+                <router-link to="/aboutme">Expérience</router-link>
+            </li>
         </ul>
 
     </nav>
@@ -30,8 +33,10 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/scss/variables.scss";
+@import "src/assets/scss/animMixin.scss";
 
 nav {
+    @include sliderbotSize;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,12 +45,11 @@ nav {
     width: 90%;
     font-family: 'Raleway', sans-serif;
     position: fixed;
-    //border-radius: 8px;
     z-index: 1;
-    //background-color: $secondary-color;
     border-radius: 0 0 5px 5px;
     box-shadow: 3px 3px 6px;
-
+    animation: sliderbot 1s ease-in-out forwards;
+    animation-delay: 1.3s;
 
     >ul {
         width: 100%;
@@ -54,6 +58,7 @@ nav {
         //justify-content: space-around;
         background-color: $primary-color;
         border-radius: 0 0 5px 5px;
+
 
         >li {
             width: 100%;

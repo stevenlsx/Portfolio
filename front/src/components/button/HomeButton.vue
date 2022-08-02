@@ -29,6 +29,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   padding: 3px 0 3px 0;
+  width: 50%
 }
 
 button {
@@ -37,7 +38,7 @@ button {
   background: $secondary-color;
   border: 1px solid black;
   color: rgb(255, 255, 255);
-  width: 22%;
+  width: 50%;
   height: 60px;
   font-size: 1.5rem;
   border-radius: 8px;
@@ -109,7 +110,7 @@ button {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   button {
     font-size: 1.2rem;
-    width: 30%;
+    width: 50%;
     padding: 0 5px 0 5px;
   }
 }
@@ -117,7 +118,7 @@ button {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   button {
     font-size: 1.3rem;
-    width: 30%;
+    width: 45%;
 
   }
 }
@@ -125,14 +126,14 @@ button {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   button {
     font-size: 1.4rem;
-    width: 20%;
+    width: 40%;
   }
 }
 
 @media screen and (min-width: 1025px) {
   button {
     font-size: 1.6rem;
-    width: 20%;
+    width: 40%;
 
   }
 
