@@ -149,7 +149,8 @@
     }
   }
 };
-//Mixin slider vers bot, p
+
+//Mixin slider vers bot, <p
 @mixin sliderbotSize {
   @keyframes sliderbot {
     0% {
@@ -160,6 +161,22 @@
     70% {
   
       opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes sliderbotNav {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  
+    70% {
+  
+      opacity: 0.1;
     }
   
     100% {
@@ -188,29 +205,14 @@
     }
   }
 }
-//Mixin slider vers top, from HomePage..., transition
-@mixin slide-up-project{
-  @keyframes slide-up-project {
-    0% {
-      opacity: 0;
-      transform: translateY(800px);
-    }
+/////////////////////////////////////////////////
+//ANIMATION TRANSI  --> PAGE TOUS LES PROJETS//
+////////////////////////////////////////////////
 
 
-    10% {
-      opacity: 0.1;
-
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-}
-//Mixin slider vers top, ...to ProjectPage, transition
-@mixin slide-up-accueil{
-  @keyframes slide-up-accueil {
+//Mixin slider vers top, from ..., transition
+@mixin slide-up-from{
+  @keyframes slide-up-from {
     0% {
       transform: translateY(0px);
     }
@@ -231,3 +233,158 @@
     }
   }
 }
+//Mixin slider vers top, to ProjectPage..., transition
+@mixin slide-up-to{
+  @keyframes slide-up-to {
+    0% {
+      opacity: 0;
+      transform: translateY(800px);
+    }
+
+
+    10% {
+      opacity: 0.1;
+
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+/////////////////////////////////////////////////
+//ANIMATION TRANSI  --> PAGE ACCUEIL //
+////////////////////////////////////////////////
+/// //Mixin slider vers from, ...to, transition
+@mixin slide-down-from{
+  @keyframes slide-down-from {
+    0% {opacity: 1;
+      transform: translateY(0px);
+    }
+
+    30% {
+      opacity: 1;
+      transform: translateY(-20px);
+
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(800px);
+    }
+  }
+}
+@mixin slide-down-to{
+  @keyframes slide-down-to {
+    0% {
+      opacity: 0;
+      transform: translateY(-800px);
+      visibility: hidden;
+    }
+
+
+    
+    
+    100% {
+      opacity: 0;
+      transform: translateY(0px);
+      visibility: visible;
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+//ANIMATION TRANSI  --> PAGE EXPERIENCE //
+////////////////////////////////////////////////
+@mixin slide-left-from{
+  @keyframes slide-left-from {
+    0% {
+      transform: translateX(0px);
+    }
+
+    30% {
+      opacity: 1;
+      transform: translateX(30px);
+
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-800px);
+    }
+  }
+}
+@mixin slide-left-to{
+  @keyframes slide-left-to {
+    0% {
+      opacity: 0;
+      transform: translateX(1500px);
+    }
+
+
+    10% {
+      opacity: 0.1;
+
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+/////////////////////////////////////////////////
+//ANIMATION TRANSI  --> PAGE PROJET  //
+////////////////////////////////////////////////
+@mixin slide-right-from{
+  @keyframes slide-right-from {
+    0% {
+      transform: translateX(0px);
+    }
+
+    30% {
+      opacity: 1;
+      transform: translateX(-30px);
+
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(800px);
+    }
+  }
+}
+@mixin slide-right-to{
+  @keyframes slide-right-to {
+    0% {
+      opacity: 0;
+      transform: translateX(-1500px);
+    }
+
+
+    10% {
+      opacity: 0.1;
+
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+

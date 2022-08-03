@@ -14,6 +14,7 @@ const routes = [
     component: HomePage,
     meta: {
       hideNavbar: true,
+      transition: "slide-down",
     },
   },
   {
@@ -26,25 +27,29 @@ const routes = [
     path: "/aboutme",
     name: "AboutMe",
     component: AboutMe,
-    //meta: { transition: "slide-up" },
+    meta: { transition: "slide-left" },
   },
   {
     path: "/reservia",
     name: "ProjectReservia",
     component: ProjectReservia,
+    meta: { transition: "slide-right" },
   },
   {
     path: "/ohmyfood",
     name: "ohmyfood",
     component: ProjectOhmyfood,
+    meta: { transition: "slide-right" },
   },
   {
     path: "/kanap",
     component: ProjectKanap,
+    meta: { transition: "slide-right" },
   },
   {
     path: "/groupomania",
     component: ProjectGroupomania,
+    meta: { transition: "slide-right" },
   },
 ];
 

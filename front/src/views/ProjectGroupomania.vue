@@ -83,14 +83,35 @@ export default {
         }
     }
 
-    p {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding: 0 7px 0 7px;
+    }
 
+    p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        padding: 0 12px 0 12px;
+        width: 90%
+    }
+
+    &__first_p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+
+        >p {
+            text-align: left;
+        }
     }
 
     h2 {
-        text-align: center;
+
         height: 80px;
         padding: 30px 7px 0 7px;
     }
@@ -99,21 +120,24 @@ export default {
         display: flex;
         align-items: flex-end;
         height: 100px;
+        width: 100%
     }
 
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .fiche {
+        height: 900px;
+        margin-bottom: 80px;
+
         &__first_p {
-            height: 400px;
+            height: 450px;
         }
 
         >section {
             font-size: 1.05rem;
 
             p {
-                margin-bottom: -60px;
                 height: 350px;
             }
 
@@ -132,6 +156,9 @@ export default {
 
 @media screen and (min-width: 481px) and (max-width: 768.9px) {
     .fiche {
+        height: 870px;
+        margin-bottom: 20px;
+
         &__first_p {
             height: 200px;
         }
@@ -141,7 +168,7 @@ export default {
             //height: 450px;
 
             p {
-                margin-bottom: -60px;
+                margin-bottom: -50px;
                 height: 400px;
                 padding-top: 10px
             }
@@ -164,6 +191,9 @@ export default {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .fiche {
+        height: 800px;
+        margin-bottom: 40px;
+
         &__first_p {
             height: 150px;
         }
@@ -171,6 +201,7 @@ export default {
         >section {
             font-size: 1.3rem;
             width: 75%;
+            margin-bottom: 20px;
 
             p {
                 height: 250px;
@@ -182,6 +213,8 @@ export default {
 
 @media screen and (min-width: 1025px) {
     .fiche {
+        margin-bottom: 70px;
+
         &__first_p {
             height: 130px;
         }

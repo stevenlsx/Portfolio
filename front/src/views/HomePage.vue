@@ -34,10 +34,12 @@
 <script>
 import HomeButton from "../components/button/HomeButton.vue"
 
+
 export default {
   name: "HomePage",
   components: {
-    HomeButton
+    HomeButton,
+
   },
   data() {
     return {
@@ -98,7 +100,7 @@ nav {
       @include sliderbotSize;
       animation: sliderbot 1s ease-in-out forwards;
       opacity: 0;
-      animation-delay: 0.65s;
+      animation-delay: 0.85s;
       //margin-bottom: 20px;
       padding: 20px 0 0 20px;
       background-color: white;
@@ -132,6 +134,9 @@ nav {
 
 /************** MOBILE SCREEN **************/
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    height: 800px;
+  }
 
   header {
     flex-direction: column;
@@ -139,12 +144,15 @@ nav {
   }
 
   .home {
+    height: 800px;
+
     &__me {
       margin-top: 20px;
 
       >img {
         @include sliderleftSize;
         animation: sliderleftM 1s forwards;
+        animation-delay: 0.3s;
       }
     }
 
@@ -152,11 +160,12 @@ nav {
       display: flex;
       justify-content: center;
       margin-top: 30px;
-      height: 70px;
+      height: 76px;
 
       >h1 {
         @include sliderrightSize;
         animation: sliderrightM 0.9s forwards;
+        animation-delay: 0.3s;
         font-size: 1.9rem;
       }
     }
@@ -165,17 +174,19 @@ nav {
       display: flex;
       justify-content: center;
       margin-top: 10px;
-      height: 70px;
+      height: 60px;
 
       >h2 {
         @include sliderrightSize;
         animation: sliderrightM 1s forwards;
+        animation-delay: 0.3s;
         font-size: 1.3rem;
       }
     }
 
     &__p {
       margin-top: 10px;
+      height: 250px;
       margin-bottom: 30px;
       font-size: 1.2rem;
     }
@@ -196,6 +207,7 @@ nav {
       >img {
         @include sliderleftSize;
         animation: sliderleftT 1s forwards;
+        animation-delay: 0.3s;
         width: 200px;
         height: 200px;
       }
@@ -217,6 +229,7 @@ nav {
       >h1 {
         @include sliderrightSize;
         animation: sliderrightT 1s forwards;
+        animation-delay: 0.3s;
         font-size: 1.8rem;
       }
     }
@@ -230,6 +243,7 @@ nav {
       >h2 {
         @include sliderrightSize;
         animation: sliderrightT 1s forwards;
+        animation-delay: 0.3s;
         font-size: 1.5rem;
       }
     }
@@ -265,6 +279,7 @@ nav {
       >h1 {
         @include sliderrightSize;
         animation: sliderrightD 1s forwards;
+        animation-delay: 0.3s;
         align-self: flex-end;
         font-size: 2rem;
       }
@@ -281,6 +296,7 @@ nav {
       >h2 {
         @include sliderrightSize;
         animation: sliderrightD 1s forwards;
+        animation-delay: 0.3s;
         align-self: flex-start;
         font-size: 1.8rem;
       }
@@ -299,7 +315,8 @@ nav {
 /************** WIDE SCREEN **************/
 @media screen and (min-width: 1025px) {
   header {
-    margin-top: -50px;
+    margin-top: -100px;
+    height: 400px;
   }
 
   .home {
@@ -309,6 +326,7 @@ nav {
       >img {
         @include sliderleftSize;
         animation: sliderleftW 1s forwards;
+        animation-delay: 0.3s;
         width: 257px;
         height: 257px;
       }
@@ -316,7 +334,8 @@ nav {
     }
 
     &__title {
-      margin-bottom: -25px;
+      padding-top: 40px;
+      margin-bottom: -50px;
     }
 
     &__h1 {
@@ -329,6 +348,7 @@ nav {
         @include sliderrightSize;
         width: 100%;
         animation: sliderrightW 1s forwards;
+        animation-delay: 0.3s;
         font-size: 2.2rem;
         padding-top: 40px;
       }
@@ -342,6 +362,7 @@ nav {
         @include sliderrightSize;
         width: 100%;
         animation: sliderrightW 1s forwards;
+        animation-delay: 0.3s;
         font-size: 2rem;
       }
     }
@@ -351,6 +372,10 @@ nav {
       margin-bottom: 40px;
       font-size: 1.5rem;
       height: 150px;
+    }
+
+    &__btn {
+      height: 200px;
     }
   }
 }

@@ -67,12 +67,16 @@ export default {
 
     section {
         height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     p {
-        text-align: center;
+        text-align: left;
         padding: 0 7px 0 7px;
-        height: 150px;
+        height: 170px;
+        width: 80%;
     }
 
     h2 {
@@ -83,38 +87,28 @@ export default {
 
     &__btn {
         height: 20%;
+        width: 100%;
     }
 
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .fiche {
+        margin-bottom: -30px;
+
         >section {
             font-size: 1.05rem;
-
-            p {
-                margin-bottom: -20px;
-            }
-
-            h2 {
-                margin-bottom: -20px;
-            }
         }
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768.9px) {
     .fiche {
+        margin-bottom: -30px;
+
         >section {
             font-size: 1.2rem;
 
-            p {
-                margin-bottom: -20px;
-            }
-
-            h2 {
-                margin-bottom: -20px;
-            }
         }
     }
 }
@@ -126,7 +120,7 @@ export default {
             width: 75%;
 
             p {
-                margin-bottom: -40px;
+                margin-bottom: 0px;
             }
         }
     }

@@ -48,8 +48,8 @@ nav {
     z-index: 1;
     border-radius: 0 0 5px 5px;
     box-shadow: 3px 3px 6px;
-    animation: sliderbot 1s ease-in-out forwards;
-    animation-delay: 1.3s;
+    animation: sliderbotNav 1.7s ease-in-out forwards;
+
 
     >ul {
         width: 100%;

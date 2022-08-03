@@ -109,16 +109,18 @@ button {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   button {
-    font-size: 1.2rem;
-    width: 50%;
-    padding: 0 5px 0 5px;
+    font-size: 1.1rem;
+    width: 70%;
+    padding: 0 6px 0 4px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 0 3px 0 3px;
     width: 45%;
+
 
   }
 }
@@ -133,7 +135,7 @@ button {
 @media screen and (min-width: 1025px) {
   button {
     font-size: 1.6rem;
-    width: 40%;
+    width: 43%;
 
   }
 

@@ -63,8 +63,16 @@ header {
 
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    height: 1600px;
+  }
+
+  header {
+    margin-top: -50px;
+  }
+
   section {
-    margin-top: 20px;
+    margin-top: -70px;
   }
 
   .section__card {
@@ -80,6 +88,11 @@ header {
 
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+  body {
+    height: 850px;
+  }
+
   section {
     margin-top: 20px;
   }
@@ -98,6 +111,13 @@ header {
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  body {
+    margin-bottom: 50px;
+  }
+
+
+
   section {
     margin-top: 40px;
   }
@@ -116,12 +136,20 @@ header {
 
 
 @media screen and (min-width: 1025px) {
+  body {
+    height: 1000px;
+  }
 
-  section {
-    margin-top: 40px;
+  .header__h1 h1 {
+    margin-top: -50px;
+  }
+
+  header {
+    margin-bottom: -50px;
   }
 
   .section__card {
+    margin-top: -25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -61,6 +61,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -80px;
 
     header {
         text-align: center;
@@ -75,12 +76,17 @@ export default {
 
     section {
         height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     p {
-        text-align: center;
+        text-align: left;
         padding: 0 7px 0 7px;
-        height: 150px;
+        height: 180px;
+        width: 90%;
     }
 
     h2 {
@@ -91,6 +97,7 @@ export default {
 
     &__btn {
         height: 20%;
+        width: 100%;
     }
 
 }

@@ -20,12 +20,15 @@
                 La page panier permet de modifier les quantités d'un produit ou de le supprimer (actualisant le prix).
                 Les inputs des utilisateurs doivent être validés pour vérifier le format et le type de données.<br />
                 La page confirmation affiche le numéro de commande sans le stocker.<br />
-                Usage de Fetch communiquer avec l'API.
+                Usage de Fetch pour communiquer avec l'API.
             </p>
 
-            <RedirectButton :class="{ section__btn: isActive }" @click="goToGit()"></RedirectButton>
+
 
         </section>
+        <div class="section__btn">
+            <RedirectButton @click="goToGit()"></RedirectButton>
+        </div>
     </div>
 
 </template>
@@ -54,7 +57,6 @@ export default {
 </script>
 <style scoped lang="scss">
 .fiche {
-    //height: 100%;
     font-family: "raleway", sans-serif;
     font-size: 1rem;
     color: white;
@@ -80,10 +82,23 @@ export default {
         }
     }
 
-    p {
+    &__first_p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         text-align: center;
-        padding: 0 7px 0 7px;
+        height: 400px;
 
+        >p {
+            text-align: left;
+
+        }
+    }
+
+    p {
+        text-align: left;
+        padding: 0 7px 0 7px;
+        width: 90%;
     }
 
     h2 {
@@ -92,26 +107,37 @@ export default {
         padding: 30px 7px 0 7px;
     }
 
-    .section__btn {
+    section {
         display: flex;
-        align-items: flex-end;
-        height: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section__btn {
+        width: 100%;
+        //height: 80px;
+
     }
 
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .fiche {
+        height: 900px;
+
         &__first_p {
-            height: 130px;
+            height: 170px;
         }
 
         >section {
             font-size: 1.05rem;
 
+
             p {
-                margin-bottom: -30px;
-                height: 400px;
+
+                height: 200px;
+                padding-bottom: 130px;
+
             }
 
             h2 {
@@ -119,17 +145,21 @@ export default {
 
             }
 
-            .section__btn {
-                display: flex;
-                align-items: flex-end;
-                height: 50px;
-            }
+
+        }
+
+        .section__btn {
+
+            width: 100%;
+
         }
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768.9px) {
     .fiche {
+        height: 850px;
+
         &__first_p {
             height: 200px;
         }
@@ -139,8 +169,9 @@ export default {
 
             p {
                 margin-bottom: -60px;
-                height: 400px;
-                padding-top: 10px
+                height: 300px;
+                padding-top: 10px;
+                padding-bottom: 10px
             }
 
             h2 {
@@ -161,6 +192,9 @@ export default {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .fiche {
+        height: 800px;
+        margin-bottom: 30px;
+
         &__first_p {
             height: 150px;
         }
@@ -174,11 +208,22 @@ export default {
                 margin-bottom: 30px;
             }
         }
+
+        .section__btn {
+
+            margin-top: -10px;
+
+            width: 100%;
+            margin-bottom: 60px;
+
+        }
     }
 }
 
 @media screen and (min-width: 1025px) {
     .fiche {
+        height: 800px;
+
         &__first_p {
             height: 130px;
         }

@@ -65,23 +65,16 @@
         </ul>
       </article>
     </section>
-    <footer>
-      <h2>En savoir plus</h2>
-      <ul>
-        <li>CV</li>
-        <li>Mail</li>
-        <li>Tel: 0673021473</li>
-        <li>Réseaux:
-          <fa icon="linkedin" />
-        </li>
-      </ul>
-    </footer>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "aboutMe",
+  components: {
+
+  },
   data() {
     return {
 
@@ -103,9 +96,10 @@ export default {
 .xp {
   display: flex;
   flex-direction: column;
-
+  //justify-content: space-around;
   font-family: 'Raleway', sans-serif;
   color: white;
+  height: 1260px;
 
   &__parcours {
     display: flex;
@@ -116,12 +110,13 @@ export default {
     width: 70%;
     text-align: center;
     box-sizing: content-box;
-    //box-shadow: 5px 5px 1px black;
+    margin-top: -80px;
     margin-bottom: 40px;
+
 
     &__p {
       box-shadow: 10px 10px 50px black;
-      padding: 15px 0 15px 0;
+      margin-top: -30px;
       margin-bottom: 20px;
       border-radius: 8px;
     }
@@ -133,17 +128,23 @@ export default {
   }
 
   h2 {
-    height: 80px;
+    height: 100px;
     align-self: center;
     font-size: 1.8rem;
+    margin-bottom: 50px;
+    padding-top: 50px;
 
   }
+
+
 
   &__section_front,
   &__section_back {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
+    margin-top: 20px;
+
 
     h3 {
       text-align: center;
@@ -179,34 +180,16 @@ export default {
     }
   }
 
-  footer {
-    border-top: 3px solid black;
-    padding-top: 20px;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    ul {
-
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-evenly;
-
-      li {
-        margin-top: 40px;
-        font-size: 1.3rem;
-        list-style: none;
-      }
-    }
-  }
 }
 
 /************** MOBILE SCREEN **************/
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .xp {
+    height: 1600px;
+
     section {
+      margin-top: -40px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -218,6 +201,7 @@ export default {
     &__section_back {
       height: 230px;
       width: 85%;
+      box-shadow: 23px 70px 5px black;
 
       h3 {
         font-size: 1.4rem;
@@ -244,7 +228,11 @@ export default {
 /************** TABLET SCREEN **************/
 @media screen and (min-width: 481px) and (max-width: 768.9px) {
   .xp {
+    height: 1500px;
+    margin-bottom: 60px;
+
     section {
+      margin-top: -50px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -256,6 +244,8 @@ export default {
     &__section_back {
       height: 230px;
       width: 85%;
+      margin-bottom: 20px;
+      box-shadow: 35px 75px 5px black;
 
       h3 {
         font-size: 1.5rem;
