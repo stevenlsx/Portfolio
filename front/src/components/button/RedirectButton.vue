@@ -44,7 +44,6 @@ button {
   box-shadow: 5px 5px 5px black;
   font-family: 'Raleway', sans-serif;
   transition: .6s;
-  ;
   overflow: hidden;
   margin-top: 40px;
   animation: slidertop 1s ease-in-out forwards;
@@ -117,7 +116,6 @@ button {
   button {
     font-size: 1.2rem;
     width: 30%;
-
   }
 }
 
@@ -132,11 +130,9 @@ button {
   button {
     font-size: 1.4rem;
     width: 28%;
-
   }
 
   .container {
-
     margin-bottom: 20px;
   }
 }

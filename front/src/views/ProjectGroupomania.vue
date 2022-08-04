@@ -23,19 +23,14 @@
                 Les publications les plus récentes doivent être facilement repérable. <br />
                 Un administrateur doit pouvoir modérer les intéractions entre salariés.<br />
                 La session de utilisateur doit persister pendant qu'il est connecté.<br />
-
             </p>
-
             <RedirectButton :class="{ section__btn: isActive }" @click="goToGit()"></RedirectButton>
-
         </section>
     </div>
 
 </template>
 
 <script>
-
-
 import RedirectButton from "../components/button/RedirectButton.vue";
 
 export default {
@@ -66,8 +61,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 
     header {
         text-align: center;
@@ -111,7 +104,6 @@ export default {
     }
 
     h2 {
-
         height: 80px;
         padding: 30px 7px 0 7px;
     }
@@ -165,7 +157,6 @@ export default {
 
         >section {
             font-size: 1.2rem;
-            //height: 450px;
 
             p {
                 margin-bottom: -50px;

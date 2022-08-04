@@ -59,7 +59,6 @@ export default {
 
 }
 
-
 @font-face {
   font-family: "raleway";
   src: local("fonts"),
@@ -106,7 +105,7 @@ export default {
   animation: slide-left-to 1s ease-out;
 }
 
-//ANIMATION TRANSI --> PAGE PROJET//
+//ANIMATION TRANSI --> PAGE DE PROJET//
 .slide-right-leave-active {
   @include slide-right-from;
   animation: slide-right-from 0.7s ease-in;

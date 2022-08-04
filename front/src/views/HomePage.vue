@@ -17,23 +17,21 @@
       </header>
       <div class="home__p">
         <p>
-          "Diplômé de la formation de développeur web OpenClassrooms, je suis formé au front-end et au back-end.<br>
-          Cette expérience a été une porte d'entrée dans le monde du développement web. Je suis donc impatient de
-          développer mes compétences en travaillant avec vous".
+          "Diplômé de la formation OpenClassrooms, 1ère plateforme européenne de formation en ligne, je me suis formé
+          sur le front-end et le back-end ainsi qu'à leurs applications à travers différents projets.<br />
+          Je suis impatient de pouvoir mettre mes compétences à votre service !
         </p>
       </div>
       <div class="home__btn">
         <HomeButton @click="goToProject()">{{ btnText }}</HomeButton>
         <HomeButton @click="goToAboutMe()">{{ btnTextMe }}</HomeButton>
       </div>
-
     </div>
   </body>
 </template>
 
 <script>
 import HomeButton from "../components/button/HomeButton.vue"
-
 
 export default {
   name: "HomePage",
@@ -85,7 +83,6 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-
   }
 
   &__p {
@@ -94,14 +91,13 @@ nav {
     width: 90%;
     font-size: 1.2rem;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 10px 2px 3px;
 
     >p {
       @include sliderbotSize;
       animation: sliderbot 1s ease-in-out forwards;
       opacity: 0;
       animation-delay: 0.85s;
-      //margin-bottom: 20px;
       padding: 20px 0 0 20px;
       background-color: white;
       color: black;
@@ -186,7 +182,7 @@ nav {
 
     &__p {
       margin-top: 10px;
-      height: 250px;
+      height: 290px;
       margin-bottom: 30px;
       font-size: 1.2rem;
     }
@@ -215,8 +211,6 @@ nav {
 
     &__title {
       width: 50%;
-
-
     }
 
     &__h1 {
@@ -286,6 +280,7 @@ nav {
     }
 
     &__me {
+      margin-top: -30px;
       padding-bottom: 60px;
     }
 
@@ -307,6 +302,11 @@ nav {
       margin-top: 35px;
       margin-bottom: 20px;
       font-size: 1.5rem;
+      height: 210px;
+    }
+
+    &__btn {
+      height: 230px;
     }
   }
 }
@@ -315,7 +315,7 @@ nav {
 /************** WIDE SCREEN **************/
 @media screen and (min-width: 1025px) {
   header {
-    margin-top: -100px;
+    margin-top: -130px;
     height: 400px;
   }
 
@@ -339,7 +339,6 @@ nav {
     }
 
     &__h1 {
-
       height: 100px;
       margin-bottom: 10px;
       padding-top: 20px;
@@ -368,14 +367,14 @@ nav {
     }
 
     &__p {
-      margin-top: 80px;
+      margin-top: 25px;
       margin-bottom: 40px;
       font-size: 1.5rem;
       height: 150px;
     }
 
     &__btn {
-      height: 200px;
+      height: 180px;
     }
   }
 }

@@ -88,8 +88,6 @@ a {
     transition: 0.6s;
 }
 
-
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .overlay {
         display: flex;
@@ -266,7 +264,7 @@ a {
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024.9px) {
     .overlay {
         position: absolute;
         display: flex;
@@ -345,7 +343,6 @@ a {
             background-color: white;
             border-radius: 0 0 18px 18px;
 
-
             >p {
                 width: 100%;
                 height: 80px;
@@ -365,7 +362,6 @@ a {
                 height: 70px;
                 padding-top: 15px;
                 font-size: 1.7rem;
-
             }
         }
     }
@@ -456,8 +452,6 @@ a {
                 background-color: white;
                 border-radius: 0 0 18px 18px;
                 font-size: 1.4rem;
-
-
             }
         }
 

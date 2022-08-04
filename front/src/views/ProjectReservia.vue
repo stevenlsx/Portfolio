@@ -1,6 +1,5 @@
 <template>
     <div class="fiche">
-
         <header>
             <img src="../assets/img/reservia_logo.png" alt="Logo Reservia">
         </header>
@@ -20,15 +19,10 @@
                 <RedirectButton @click="goToGit()"></RedirectButton>
             </div>
         </section>
-
-
     </div>
-
 </template>
 
 <script>
-
-
 import RedirectButton from "../components/button/RedirectButton.vue";
 
 export default {
@@ -108,7 +102,6 @@ export default {
 
         >section {
             font-size: 1.2rem;
-
         }
     }
 }
@@ -128,7 +121,6 @@ export default {
 
 @media screen and (min-width: 1025px) {
     .fiche {
-
         >section {
             font-size: 1.4rem;
             width: 75%;

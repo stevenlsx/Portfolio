@@ -11,7 +11,7 @@ export default {
   name: 'homeButton',
   data() {
     return {
-      isActive: true
+
     }
   },
   methods: {
@@ -120,8 +120,6 @@ button {
     font-size: 1.2rem;
     padding: 0 3px 0 3px;
     width: 45%;
-
-
   }
 }
 
@@ -130,18 +128,21 @@ button {
     font-size: 1.4rem;
     width: 40%;
   }
+
+  .container {
+    height: 210px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   button {
     font-size: 1.6rem;
     width: 43%;
-
   }
 
   .container {
-
     margin-bottom: 20px;
+    height: 150px;
   }
 }
 </style>

@@ -14,7 +14,7 @@
                     <fa icon="envelope" color="white" size="lg" transform="right-6 down-1" />
                 </a></li>
             <li>
-                <fa icon="phone-square" size="lg" /> 06.73.02.14.73
+                <fa icon="phone-square" size="lg" />: 06.73.02.14.73
             </li>
             <li .class="reseaux">Reseaux:
                 <a href="https://www.linkedin.com/in/steven-ls/">
@@ -58,7 +58,6 @@ footer {
         width: 60%;
         border-top: 3px solid rgb(105, 104, 104);
         padding-bottom: 20px;
-
     }
 
     ul {
@@ -69,15 +68,12 @@ footer {
 
         li {
             margin-top: 40px;
-
             list-style: none;
-
 
             &:last-child {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-
             }
 
             a :hover {
@@ -92,8 +88,6 @@ footer {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     footer {
-        //padding-bottom: 60px;
-
         h2 {
             padding-top: 10px;
             font-size: 1.7rem;
@@ -149,8 +143,6 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     ul {
-
-
         li {
             width: 20%;
             font-size: 1.25rem;
@@ -162,7 +154,6 @@ footer {
             }
         }
     }
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -174,7 +165,6 @@ footer {
     h2 {
         text-align: center;
         font-size: 1.8rem;
-
         padding-right: 15px;
         margin-bottom: 10px;
         padding-bottom: 5px;

@@ -285,7 +285,6 @@ export default {
     width: 50%;
     padding: 0 5px 0 5px;
 
-
     &:focus {
       outline: 0;
     }
@@ -337,9 +336,6 @@ export default {
         transition: 0.9s;
       }
     }
-
-
-
   }
 
 }

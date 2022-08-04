@@ -1,6 +1,5 @@
 <template>
     <div class="fiche">
-
         <header>
             <img src="../assets/img/ohmyfood_logo.png" alt="Logo Ohmyfood">
         </header>
@@ -22,15 +21,10 @@
                 <RedirectButton @click="goToGit()"></RedirectButton>
             </div>
         </section>
-
-
     </div>
-
 </template>
 
 <script>
-
-
 import RedirectButton from "../components/button/RedirectButton.vue";
 
 export default {
@@ -79,7 +73,6 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     p {
@@ -149,7 +142,6 @@ export default {
 
 @media screen and (min-width: 1025px) {
     .fiche {
-
         >section {
             font-size: 1.4rem;
             width: 75%;

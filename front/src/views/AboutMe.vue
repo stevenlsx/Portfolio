@@ -86,17 +86,12 @@ export default {
 }
 </script>
 
-
-
-
-
 <style scoped lang="scss">
 @import "src/assets/scss/variables.scss";
 
 .xp {
   display: flex;
   flex-direction: column;
-  //justify-content: space-around;
   font-family: 'Raleway', sans-serif;
   color: white;
   height: 1260px;
@@ -112,7 +107,6 @@ export default {
     box-sizing: content-box;
     margin-top: -80px;
     margin-bottom: 40px;
-
 
     &__p {
       box-shadow: 10px 10px 50px black;
@@ -133,7 +127,6 @@ export default {
     font-size: 1.8rem;
     margin-bottom: 50px;
     padding-top: 50px;
-
   }
 
 
@@ -144,7 +137,6 @@ export default {
     flex-direction: column;
     border-radius: 8px;
     margin-top: 20px;
-
 
     h3 {
       text-align: center;
@@ -179,8 +171,6 @@ export default {
       }
     }
   }
-
-
 }
 
 /************** MOBILE SCREEN **************/
@@ -217,10 +207,8 @@ export default {
           display: flex;
           flex-direction: row;
           width: 40%;
-
         }
       }
-
     }
   }
 }
@@ -262,10 +250,8 @@ export default {
           flex-direction: row;
           width: 40%;
           height: 45px;
-
         }
       }
-
     }
   }
 }
@@ -288,7 +274,6 @@ export default {
 
       ul {
         justify-content: flex-start;
-
       }
     }
   }
@@ -313,7 +298,6 @@ export default {
 
       ul {
         justify-content: flex-start;
-
       }
     }
   }

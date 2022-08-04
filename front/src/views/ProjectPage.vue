@@ -43,14 +43,12 @@ body {
 }
 
 header {
-
   height: 250px;
 }
 
 .header__h1 {
   text-align: center;
   height: 100px;
-
 
   >h1 {
     padding-top: 70px;
@@ -59,8 +57,6 @@ header {
 
   }
 }
-
-
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   body {
@@ -111,7 +107,6 @@ header {
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
   body {
     margin-bottom: 50px;
   }

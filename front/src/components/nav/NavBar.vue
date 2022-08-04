@@ -40,7 +40,6 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    //align-items: center;
     height: 50px;
     width: 90%;
     font-family: 'Raleway', sans-serif;
@@ -50,12 +49,10 @@ nav {
     box-shadow: 3px 3px 6px;
     animation: sliderbotNav 1.7s ease-in-out forwards;
 
-
     >ul {
         width: 100%;
         display: flex;
         flex-direction: row;
-        //justify-content: space-around;
         background-color: $primary-color;
         border-radius: 0 0 5px 5px;
 
@@ -81,11 +78,8 @@ a {
     font-size: 1.3rem;
     background-color: $primary-color;
 
-
-
     &:hover {
         color: $tertiary-color;
-
     }
 }
 
@@ -98,5 +92,26 @@ a {
         border-bottom-color: $tertiary-color;
     }
 
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    a {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768.9px) {
+    a {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    a {
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
     <div class="fiche">
-
         <header>
             <img src="../assets/img/kanap_logo.png" alt="Logo Kanap">
         </header>
@@ -22,20 +21,14 @@
                 La page confirmation affiche le numéro de commande sans le stocker.<br />
                 Usage de Fetch pour communiquer avec l'API.
             </p>
-
-
-
         </section>
         <div class="section__btn">
             <RedirectButton @click="goToGit()"></RedirectButton>
         </div>
     </div>
-
 </template>
 
 <script>
-
-
 import RedirectButton from "../components/button/RedirectButton.vue";
 
 export default {
@@ -66,8 +59,6 @@ export default {
     flex-direction: column;
     align-items: center;
 
-
-
     header {
         text-align: center;
         height: 150px;
@@ -91,7 +82,6 @@ export default {
 
         >p {
             text-align: left;
-
         }
     }
 
@@ -115,10 +105,7 @@ export default {
 
     .section__btn {
         width: 100%;
-        //height: 80px;
-
     }
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -132,26 +119,20 @@ export default {
         >section {
             font-size: 1.05rem;
 
-
             p {
-
                 height: 200px;
                 padding-bottom: 130px;
-
             }
 
             h2 {
                 margin-bottom: 20px;
-
             }
 
 
         }
 
         .section__btn {
-
             width: 100%;
-
         }
     }
 }
@@ -210,12 +191,9 @@ export default {
         }
 
         .section__btn {
-
             margin-top: -10px;
-
             width: 100%;
             margin-bottom: 60px;
-
         }
     }
 }
